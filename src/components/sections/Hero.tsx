@@ -13,21 +13,21 @@ export function Hero() {
             ABHINAV BHATPUDE
           </p>
 
-          <h1 className="text-display mt-4 text-[var(--text-primary)]">
+          <h1 className="text-display mt-4 max-w-4xl text-[var(--text-primary)]">
             Full-Stack Developer building modern web and AI-powered products.
           </h1>
 
-          <p className="text-body-lg mt-6 max-w-2xl text-[var(--text-secondary)]">
+          <p className="text-body-lg mt-5 max-w-2xl text-[var(--text-secondary)] sm:mt-6">
             Computer Engineering student focused on building practical
             full-stack applications, exploring AI technologies, and preparing
             for software engineering internships.
           </p>
 
-          <p className="mt-6 text-small font-medium text-[var(--accent)]">
+          <p className="mt-5 text-small font-medium text-[var(--accent)] sm:mt-6">
             Currently open to internship opportunities.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
             <Button href="#projects" className="w-full sm:w-auto">
               View Projects
             </Button>
@@ -41,7 +41,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-small text-[var(--text-secondary)]">
+          <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-small text-[var(--text-secondary)] sm:mt-8">
             <a
               href="https://github.com/abhinav05-bhatpude"
               target="_blank"
