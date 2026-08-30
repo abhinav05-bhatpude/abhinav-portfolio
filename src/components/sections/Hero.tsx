@@ -41,23 +41,14 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-small text-[var(--text-secondary)] sm:mt-8">
-            <a
-              href="https://github.com/abhinav05-bhatpude"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-sm transition-colors duration-200 hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
-            >
-              GitHub
-            </a>
-
+          <div className="mt-7 text-small text-[var(--text-secondary)] sm:mt-8">
             <a
               href="https://www.linkedin.com/in/abhinav-bhatpude-03b832327"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-sm transition-colors duration-200 hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
             >
-              LinkedIn
+              Connect with me on LinkedIn
             </a>
           </div>
         </div>
