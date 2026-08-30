@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
+import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
+import { Journey } from "@/components/sections/Journey";
 import { Section } from "@/components/ui/layout/Section";
 
 export default function Home() {
@@ -10,9 +12,7 @@ export default function Home() {
       <main>
         <Hero />
 
-        <Section id="about">
-          <div className="h-40" />
-        </Section>
+        <About />
 
         <Section id="skills">
           <div className="h-40" />
@@ -22,9 +22,7 @@ export default function Home() {
           <div className="h-40" />
         </Section>
 
-        <Section id="journey">
-          <div className="h-40" />
-        </Section>
+        <Journey />
 
         <Section id="contact">
           <div className="h-40" />
