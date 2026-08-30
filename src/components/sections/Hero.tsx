@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-[calc(100vh-4rem)] items-center py-20"
+      className="flex min-h-[calc(100vh-4rem)] items-center py-16 sm:py-20 lg:py-24"
     >
       <Container>
         <div className="max-w-4xl">
@@ -27,37 +27,41 @@ export function Hero() {
             Currently open to internship opportunities.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="#projects">View Projects</Button>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <Button href="#projects" className="w-full sm:w-auto">
+              View Projects
+            </Button>
 
             <Button
               href="https://github.com/abhinav05-bhatpude"
               variant="secondary"
+              className="w-full sm:w-auto"
             >
               GitHub
             </Button>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-small text-[var(--text-secondary)]">
+            <a
+              href="https://github.com/abhinav05-bhatpude"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-[var(--accent)]"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/abhinav-bhatpude-03b832327"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-[var(--accent)]"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </Container>
     </section>
   );
-  <div className="mt-8 flex items-center gap-5 text-small text-[var(--text-secondary)]">
-  <a
-    href="https://github.com/abhinav05-bhatpude"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transition-colors hover:text-[var(--accent)]"
-  >
-    GitHub
-  </a>
-
-  <a
-    href="https://www.linkedin.com/in/abhinav-bhatpude-03b832327"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transition-colors hover:text-[var(--accent)]"
-  >
-    LinkedIn
-  </a>
-</div>
 }
