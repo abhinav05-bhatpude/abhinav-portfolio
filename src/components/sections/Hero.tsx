@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/layout/Container";
 
 export function Hero() {
@@ -9,17 +10,33 @@ export function Hero() {
       <Container>
         <div className="max-w-4xl">
           <p className="text-label text-[var(--accent)]">
-            FULL-STACK DEVELOPER · AI DEVELOPER
+            ABHINAV BHATPUDE
           </p>
 
           <h1 className="text-display mt-4 text-[var(--text-primary)]">
-            Building full-stack and AI-powered products.
+            Full-Stack Developer building modern web and AI-powered products.
           </h1>
 
           <p className="text-body-lg mt-6 max-w-2xl text-[var(--text-secondary)]">
-            I&apos;m Abhinav, a Computer Engineering student building modern
-            web applications and practical AI-powered products.
+            Computer Engineering student focused on building practical
+            full-stack applications, exploring AI technologies, and preparing
+            for software engineering internships.
           </p>
+
+          <p className="mt-6 text-small font-medium text-[var(--accent)]">
+            Currently open to internship opportunities.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button href="#projects">View Projects</Button>
+
+            <Button
+              href="https://github.com/abhinav05-bhatpude"
+              variant="secondary"
+            >
+              GitHub
+            </Button>
+          </div>
         </div>
       </Container>
     </section>
