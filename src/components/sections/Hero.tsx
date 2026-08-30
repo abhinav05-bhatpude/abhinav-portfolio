@@ -8,7 +8,7 @@ export function Hero() {
       className="flex min-h-[calc(100vh-4rem)] items-center py-16 sm:py-20 lg:py-24"
     >
       <Container>
-        <div className="max-w-4xl">
+        <div className="max-w-4xl transition-transform duration-300">
           <p className="text-label text-[var(--accent)]">
             ABHINAV BHATPUDE
           </p>
@@ -46,7 +46,7 @@ export function Hero() {
               href="https://github.com/abhinav05-bhatpude"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[var(--accent)]"
+              className="rounded-sm transition-colors duration-200 hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
             >
               GitHub
             </a>
@@ -55,7 +55,7 @@ export function Hero() {
               href="https://www.linkedin.com/in/abhinav-bhatpude-03b832327"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[var(--accent)]"
+              className="rounded-sm transition-colors duration-200 hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
             >
               LinkedIn
             </a>
