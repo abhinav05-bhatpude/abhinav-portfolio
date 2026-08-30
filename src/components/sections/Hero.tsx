@@ -41,4 +41,23 @@ export function Hero() {
       </Container>
     </section>
   );
+  <div className="mt-8 flex items-center gap-5 text-small text-[var(--text-secondary)]">
+  <a
+    href="https://github.com/abhinav05-bhatpude"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-colors hover:text-[var(--accent)]"
+  >
+    GitHub
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/abhinav-bhatpude-03b832327"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-colors hover:text-[var(--accent)]"
+  >
+    LinkedIn
+  </a>
+</div>
 }
