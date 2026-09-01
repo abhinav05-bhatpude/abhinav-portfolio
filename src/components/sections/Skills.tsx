@@ -33,13 +33,34 @@ const frontendSkills = [
 ];
 
 const backendSkills = [
-  "Node.js",
-  "Express.js",
-  "REST APIs",
-  "MongoDB",
-  "PostgreSQL",
-  "Prisma ORM",
-  "SQL",
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Prisma",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+  },
+  {
+    name: "REST APIs",
+    icon: "https://miro.medium.com/v2/resize:fit:1400/1*-dbPsi8Mdqj5Y0454eGvPQ.png",
+  },
+  {
+    name: "SQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
 ];
 
 export function Skills() {
@@ -92,14 +113,22 @@ export function Skills() {
             Developing APIs, application logic, and database-driven systems.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {backendSkills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-[var(--border)] px-3 py-1.5 text-small text-[var(--text-secondary)]"
+              <div
+                key={skill.name}
+                className="flex flex-col items-center justify-center gap-3 rounded-[var(--radius-md)] border border-[var(--border)] p-4 transition-transform duration-200 hover:-translate-y-1"
               >
-                {skill}
-              </span>
+                <img
+                  src={skill.icon}
+                  alt={`${skill.name} logo`}
+                  className="h-10 w-10"
+                />
+
+                <span className="text-small text-center text-[var(--text-secondary)]">
+                  {skill.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>
