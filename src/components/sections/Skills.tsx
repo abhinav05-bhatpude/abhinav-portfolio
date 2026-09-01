@@ -11,6 +11,16 @@ const frontendSkills = [
   "Tailwind CSS",
 ];
 
+const backendSkills = [
+  "Node.js",
+  "Express.js",
+  "REST APIs",
+  "MongoDB",
+  "PostgreSQL",
+  "Prisma ORM",
+  "SQL",
+];
+
 export function Skills() {
   return (
     <Section id="skills">
@@ -21,6 +31,7 @@ export function Skills() {
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
+        {/* Frontend */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             Frontend
@@ -42,6 +53,7 @@ export function Skills() {
           </div>
         </div>
 
+        {/* Backend & Databases */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             Backend & Databases
@@ -50,8 +62,20 @@ export function Skills() {
           <p className="text-body mt-4 text-[var(--text-secondary)]">
             Developing APIs, application logic, and database-driven systems.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {backendSkills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-[var(--border)] px-3 py-1.5 text-small text-[var(--text-secondary)]"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
 
+        {/* AI & Tools */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             AI & Tools
@@ -63,6 +87,7 @@ export function Skills() {
           </p>
         </div>
 
+        {/* Testing & Authentication */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             Testing & Authentication
