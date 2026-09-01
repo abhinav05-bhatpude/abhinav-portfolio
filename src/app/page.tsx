@@ -3,6 +3,7 @@ import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
 import { Journey } from "@/components/sections/Journey";
 import { Section } from "@/components/ui/layout/Section";
+import { Skills } from "@/components/sections/Skills";
 
 export default function Home() {
   return (
@@ -14,9 +15,7 @@ export default function Home() {
 
         <About />
 
-        <Section id="skills">
-          <div className="h-40" />
-        </Section>
+       <Skills />
 
         <Section id="projects">
           <div className="h-40" />
