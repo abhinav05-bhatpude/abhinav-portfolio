@@ -1,6 +1,16 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Section } from "@/components/ui/layout/Section";
 
+const frontendSkills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript (ES6+)",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Tailwind CSS",
+];
+
 export function Skills() {
   return (
     <Section id="skills">
@@ -19,6 +29,17 @@ export function Skills() {
           <p className="text-body mt-4 text-[var(--text-secondary)]">
             Building responsive and modern user interfaces.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {frontendSkills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-[var(--border)] px-3 py-1.5 text-small text-[var(--text-secondary)]"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
