@@ -2,13 +2,34 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Section } from "@/components/ui/layout/Section";
 
 const frontendSkills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript (ES6+)",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Tailwind CSS",
+  {
+    name: "HTML5",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS3",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  },
 ];
 
 const backendSkills = [
@@ -41,14 +62,22 @@ export function Skills() {
             Building responsive and modern user interfaces.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {frontendSkills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-[var(--border)] px-3 py-1.5 text-small text-[var(--text-secondary)]"
+              <div
+                key={skill.name}
+                className="flex flex-col items-center justify-center gap-3 rounded-[var(--radius-md)] border border-[var(--border)] p-4 transition-transform duration-200 hover:-translate-y-1"
               >
-                {skill}
-              </span>
+                <img
+                  src={skill.icon}
+                  alt={`${skill.name} logo`}
+                  className="h-10 w-10"
+                />
+
+                <span className="text-small text-center text-[var(--text-secondary)]">
+                  {skill.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>
