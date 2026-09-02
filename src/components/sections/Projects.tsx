@@ -1,6 +1,52 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Section } from "@/components/ui/layout/Section";
 
+const projects = [
+  {
+    number: "PROJECT 01",
+    name: "Startup Lens AI",
+    description:
+      "An AI-powered platform that analyzes startup ideas and generates feasibility reports, SWOT analysis, monetization strategies, and execution roadmaps.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Gemini AI",
+    ],
+    githubUrl: "https://github.com/abhinav05-bhatpude/startup-lens-ai",
+  },
+  {
+    number: "PROJECT 02",
+    name: "Recall AI",
+    description:
+      "A full-stack application designed to help users organize and manage information through a modern, database-driven platform.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Auth.js",
+    ],
+    githubUrl: "https://github.com/abhinav05-bhatpude/recall-ai",
+  },
+  {
+    number: "PROJECT 03",
+    name: "SkillMatch AI",
+    description:
+      "An AI-powered internship discovery platform that analyzes resumes, identifies skill gaps, matches users with relevant opportunities, and helps track applications.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "GraphQL",
+      "AI",
+    ],
+    githubUrl: "https://github.com/abhinav05-bhatpude/skillmatch-ai",
+  },
+];
+
 export function Projects() {
   return (
     <Section id="projects">
@@ -11,97 +57,46 @@ export function Projects() {
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
-        {/* Startup Lens AI */}
-        <article className="min-h-[280px] rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
-          <p className="text-label text-[var(--accent)]">PROJECT 01</p>
+        {projects.map((project) => (
+          <article
+            key={project.name}
+            className="flex min-h-[320px] flex-col rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6"
+          >
+            <p className="text-label text-[var(--accent)]">
+              {project.number}
+            </p>
 
-          <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
-            Startup Lens AI
-          </h3>
+            <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
+              {project.name}
+            </h3>
 
-          <p className="text-body mt-4 text-[var(--text-secondary)]">
-            An AI-powered platform that analyzes startup ideas and generates
-            feasibility reports, SWOT analysis, monetization strategies, and
-            execution roadmaps.
-          </p>
+            <p className="text-body mt-4 text-[var(--text-secondary)]">
+              {project.description}
+            </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Gemini AI"].map(
-              (tech) => (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
                 <span
                   key={tech}
                   className="rounded-full border border-[var(--border)] px-3 py-1 text-small text-[var(--text-secondary)]"
                 >
                   {tech}
                 </span>
-              )
-            )}
-          </div>
-        </article>
+              ))}
+            </div>
 
-        {/* Recall AI */}
-        <article className="min-h-[280px] rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
-          <p className="text-label text-[var(--accent)]">PROJECT 02</p>
-
-          <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
-            Recall AI
-          </h3>
-
-          <p className="text-body mt-4 text-[var(--text-secondary)]">
-            A full-stack application designed to help users organize and manage
-            information through a modern, database-driven platform.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {[
-              "Next.js",
-              "TypeScript",
-              "PostgreSQL",
-              "Prisma",
-              "Auth.js",
-            ].map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-[var(--border)] px-3 py-1 text-small text-[var(--text-secondary)]"
+            <div className="mt-auto pt-6">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-small font-medium text-[var(--accent)] transition-opacity hover:opacity-80"
               >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </article>
-
-        {/* SkillMatch AI */}
-        <article className="min-h-[280px] rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
-          <p className="text-label text-[var(--accent)]">PROJECT 03</p>
-
-          <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
-            SkillMatch AI
-          </h3>
-
-          <p className="text-body mt-4 text-[var(--text-secondary)]">
-            An AI-powered internship discovery platform that analyzes resumes,
-            identifies skill gaps, matches users with relevant opportunities,
-            and helps track applications.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {[
-              "React",
-              "Node.js",
-              "Express",
-              "MongoDB",
-              "GraphQL",
-              "AI",
-            ].map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-[var(--border)] px-3 py-1 text-small text-[var(--text-secondary)]"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </article>
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </Section>
   );
