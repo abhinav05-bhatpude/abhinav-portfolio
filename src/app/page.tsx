@@ -2,8 +2,9 @@ import { Navbar } from "@/components/layout/Navbar";
 import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
 import { Journey } from "@/components/sections/Journey";
-import { Section } from "@/components/ui/layout/Section";
+import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
+import { Section } from "@/components/ui/layout/Section";
 
 export default function Home() {
   return (
@@ -15,11 +16,9 @@ export default function Home() {
 
         <About />
 
-       <Skills />
+        <Skills />
 
-        <Section id="projects">
-          <div className="h-40" />
-        </Section>
+        <Projects />
 
         <Journey />
 
