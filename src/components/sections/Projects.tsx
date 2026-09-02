@@ -48,8 +48,8 @@ export function Projects() {
           </h3>
 
           <p className="text-body mt-4 text-[var(--text-secondary)]">
-            A full-stack AI-powered application designed to help users organize
-            and manage information through a modern, database-driven platform.
+            A full-stack application designed to help users organize and manage
+            information through a modern, database-driven platform.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2">
@@ -70,17 +70,37 @@ export function Projects() {
           </div>
         </article>
 
-        {/* Placeholder */}
+        {/* SkillMatch AI */}
         <article className="min-h-[280px] rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <p className="text-label text-[var(--accent)]">PROJECT 03</p>
 
           <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
-            Featured Project
+            SkillMatch AI
           </h3>
 
           <p className="text-body mt-4 text-[var(--text-secondary)]">
-            Project details and technologies will be added here.
+            An AI-powered internship discovery platform that analyzes resumes,
+            identifies skill gaps, matches users with relevant opportunities,
+            and helps track applications.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "React",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "GraphQL",
+              "AI",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-[var(--border)] px-3 py-1 text-small text-[var(--text-secondary)]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </article>
       </div>
     </Section>
