@@ -53,15 +53,68 @@ const backendSkills = [
     name: "Prisma",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
   },
+];
+
+const aiAndToolsSkills = [
   {
-    name: "REST APIs",
-    icon: "https://miro.medium.com/v2/resize:fit:1400/1*-dbPsi8Mdqj5Y0454eGvPQ.png",
+    name: "Google Gemini",
+    icon: "https://cdn.simpleicons.org/googlegemini",
   },
   {
-    name: "SQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  {
+    name: "Vercel",
+    icon: "https://cdn.simpleicons.org/vercel",
+  },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
 ];
+
+const testingAndAuthSkills = [
+  {
+    name: "Jest",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+  },
+  {
+    name: "Auth.js",
+    icon: "https://cdn.simpleicons.org/auth0",
+  },
+];
+
+function SkillGrid({
+  skills,
+}: {
+  skills: { name: string; icon: string }[];
+}) {
+  return (
+    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      {skills.map((skill) => (
+        <div
+          key={skill.name}
+          className="flex flex-col items-center justify-center gap-3 rounded-[var(--radius-md)] border border-[var(--border)] p-4 transition-transform duration-200 hover:-translate-y-1"
+        >
+          <img
+            src={skill.icon}
+            alt={`${skill.name} logo`}
+            className="h-10 w-10"
+          />
+
+          <span className="text-small text-center text-[var(--text-secondary)]">
+            {skill.name}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export function Skills() {
   return (
@@ -73,7 +126,6 @@ export function Skills() {
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {/* Frontend */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             Frontend
@@ -83,27 +135,9 @@ export function Skills() {
             Building responsive and modern user interfaces.
           </p>
 
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {frontendSkills.map((skill) => (
-              <div
-                key={skill.name}
-                className="flex flex-col items-center justify-center gap-3 rounded-[var(--radius-md)] border border-[var(--border)] p-4 transition-transform duration-200 hover:-translate-y-1"
-              >
-                <img
-                  src={skill.icon}
-                  alt={`${skill.name} logo`}
-                  className="h-10 w-10"
-                />
-
-                <span className="text-small text-center text-[var(--text-secondary)]">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
+          <SkillGrid skills={frontendSkills} />
         </div>
 
-        {/* Backend & Databases */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             Backend & Databases
@@ -113,48 +147,32 @@ export function Skills() {
             Developing APIs, application logic, and database-driven systems.
           </p>
 
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {backendSkills.map((skill) => (
-              <div
-                key={skill.name}
-                className="flex flex-col items-center justify-center gap-3 rounded-[var(--radius-md)] border border-[var(--border)] p-4 transition-transform duration-200 hover:-translate-y-1"
-              >
-                <img
-                  src={skill.icon}
-                  alt={`${skill.name} logo`}
-                  className="h-10 w-10"
-                />
-
-                <span className="text-small text-center text-[var(--text-secondary)]">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
+          <SkillGrid skills={backendSkills} />
         </div>
 
-        {/* AI & Tools */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
-            AI & Tools
+            AI & Developer Tools
           </h3>
 
           <p className="text-body mt-4 text-[var(--text-secondary)]">
-            Using AI APIs and modern developer tools to build practical
+            Using AI technologies and modern tools to build practical
             applications.
           </p>
+
+          <SkillGrid skills={aiAndToolsSkills} />
         </div>
 
-        {/* Testing & Authentication */}
         <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <h3 className="text-subheading text-[var(--text-primary)]">
             Testing & Authentication
           </h3>
 
           <p className="text-body mt-4 text-[var(--text-secondary)]">
-            Building more reliable applications with testing and secure
-            authentication.
+            Building reliable applications with testing and authentication.
           </p>
+
+          <SkillGrid skills={testingAndAuthSkills} />
         </div>
       </div>
     </Section>
