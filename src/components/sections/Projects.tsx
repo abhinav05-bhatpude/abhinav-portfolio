@@ -39,17 +39,35 @@ export function Projects() {
           </div>
         </article>
 
-        {/* Placeholder */}
+        {/* Recall AI */}
         <article className="min-h-[280px] rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6">
           <p className="text-label text-[var(--accent)]">PROJECT 02</p>
 
           <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
-            Featured Project
+            Recall AI
           </h3>
 
           <p className="text-body mt-4 text-[var(--text-secondary)]">
-            Project details and technologies will be added here.
+            A full-stack AI-powered application designed to help users organize
+            and manage information through a modern, database-driven platform.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "Next.js",
+              "TypeScript",
+              "PostgreSQL",
+              "Prisma",
+              "Auth.js",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-[var(--border)] px-3 py-1 text-small text-[var(--text-secondary)]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </article>
 
         {/* Placeholder */}
