@@ -1,24 +1,36 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Section } from "@/components/ui/layout/Section";
 
-const journeyItems = [
+const journey = [
   {
-    period: "Starting Point",
-    title: "Learning the foundations",
+    stage: "01",
+    title: "Started Learning Programming",
     description:
-      "Started building programming fundamentals and exploring how software works.",
+      "Built a foundation in programming and computer science while developing problem-solving skills.",
   },
   {
-    period: "Current Focus",
-    title: "Full-stack development and AI",
+    stage: "02",
+    title: "Explored Web Development",
     description:
-      "Building modern web applications while exploring AI technologies and practical AI-powered products.",
+      "Learned modern frontend technologies and started building responsive web interfaces and practical projects.",
   },
   {
-    period: "Next Goal",
-    title: "Software engineering internship",
+    stage: "03",
+    title: "Moved Into Full-Stack Development",
     description:
-      "Focused on gaining real-world experience, contributing to products, and growing as a software engineer.",
+      "Expanded into backend development, APIs, databases, authentication, and complete application development.",
+  },
+  {
+    stage: "04",
+    title: "Building AI-Powered Products",
+    description:
+      "Started integrating artificial intelligence into practical applications while exploring modern AI development workflows.",
+  },
+  {
+    stage: "05",
+    title: "Applying for Internships",
+    description:
+      "Currently focused on building stronger projects, improving engineering skills, and gaining real-world software development experience.",
   },
 ];
 
@@ -27,29 +39,39 @@ export function Journey() {
     <Section id="journey">
       <SectionHeading
         eyebrow="My Journey"
-        title="Learning by building."
-        description="A focused journey from programming fundamentals to building practical full-stack and AI-powered applications."
+        title="Learning, building, and moving forward."
+        description="A snapshot of my progression from learning programming fundamentals to building full-stack and AI-powered applications."
       />
 
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {journeyItems.map((item) => (
-          <article
-            key={item.period}
-            className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] p-6"
-          >
-            <p className="text-label text-[var(--accent)]">
-              {item.period}
-            </p>
+      <div className="mt-12 max-w-4xl">
+        <div className="space-y-0">
+          {journey.map((item, index) => (
+            <div
+              key={item.stage}
+              className="grid grid-cols-[auto_1fr] gap-5 sm:gap-8"
+            >
+              <div className="flex flex-col items-center">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--accent)] text-sm font-semibold text-[var(--accent)]">
+                  {item.stage}
+                </div>
 
-            <h3 className="text-subheading mt-4 text-[var(--text-primary)]">
-              {item.title}
-            </h3>
+                {index !== journey.length - 1 && (
+                  <div className="min-h-16 w-px flex-1 bg-[var(--border)]" />
+                )}
+              </div>
 
-            <p className="text-body mt-4 text-[var(--text-secondary)]">
-              {item.description}
-            </p>
-          </article>
-        ))}
+              <div className="pb-10">
+                <h3 className="text-subheading text-[var(--text-primary)]">
+                  {item.title}
+                </h3>
+
+                <p className="text-body mt-3 leading-7 text-[var(--text-secondary)]">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </Section>
   );
