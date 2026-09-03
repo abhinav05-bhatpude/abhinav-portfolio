@@ -34,9 +34,10 @@ const journey = [
   },
   {
     stage: "06",
-    title: "Applying for Internships",
+    title: "Open to Internship Opportunities",
     description:
-      "Currently focused on building stronger projects, improving engineering skills, and gaining real-world software development experience.",
+      "Currently seeking software engineering internship opportunities where I can contribute to real products, learn from experienced developers, and gain practical industry experience.",
+    current: true,
   },
 ];
 
@@ -67,9 +68,17 @@ export function Journey() {
               </div>
 
               <div className="pb-10">
-                <h3 className="text-subheading text-[var(--text-primary)]">
-                  {item.title}
-                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-subheading text-[var(--text-primary)]">
+                    {item.title}
+                  </h3>
+
+                  {"current" in item && item.current && (
+                    <span className="rounded-full border border-[var(--accent)] px-3 py-1 text-xs font-medium text-[var(--accent)]">
+                      CURRENT
+                    </span>
+                  )}
+                </div>
 
                 <p className="text-body mt-3 leading-7 text-[var(--text-secondary)]">
                   {item.description}
