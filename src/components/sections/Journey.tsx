@@ -10,24 +10,30 @@ const journey = [
   },
   {
     stage: "02",
+    title: "Computer Engineering",
+    description:
+      "Currently pursuing a Diploma in Computer Engineering while strengthening my foundation in programming, software development, databases, and computer science.",
+  },
+  {
+    stage: "03",
     title: "Explored Web Development",
     description:
       "Learned modern frontend technologies and started building responsive web interfaces and practical projects.",
   },
   {
-    stage: "03",
+    stage: "04",
     title: "Moved Into Full-Stack Development",
     description:
       "Expanded into backend development, APIs, databases, authentication, and complete application development.",
   },
   {
-    stage: "04",
+    stage: "05",
     title: "Building AI-Powered Products",
     description:
       "Started integrating artificial intelligence into practical applications while exploring modern AI development workflows.",
   },
   {
-    stage: "05",
+    stage: "06",
     title: "Applying for Internships",
     description:
       "Currently focused on building stronger projects, improving engineering skills, and gaining real-world software development experience.",
