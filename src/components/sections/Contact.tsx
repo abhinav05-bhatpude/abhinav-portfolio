@@ -17,13 +17,35 @@ export function Contact() {
             or simply want to connect, feel free to reach out.
           </p>
 
-          <a
-            href="mailto:your-email@example.com"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--accent)] transition-opacity hover:opacity-80"
-          >
-            Send me an email
-            <span aria-hidden="true">→</span>
-          </a>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="mailto:abhinav.bhatpude.work@gmail.com"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[var(--accent)] transition-all duration-200 hover:-translate-y-0.5 hover:opacity-80"
+            >
+              Email Me
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/abhinav-bhatpude-03b832327"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-5 py-2.5 text-sm font-medium text-[var(--text-primary)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)]"
+            >
+              LinkedIn
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="https://github.com/abhinav05-bhatpude"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-5 py-2.5 text-sm font-medium text-[var(--text-primary)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)]"
+            >
+              GitHub
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </div>
     </Section>
