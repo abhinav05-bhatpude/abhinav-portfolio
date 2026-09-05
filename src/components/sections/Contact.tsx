@@ -29,7 +29,9 @@ export function Contact() {
             </div>
 
             <a
-              href="mailto:abhinav.bhatpude.work@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abhinav.bhatpude.work@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[var(--accent)] transition-all duration-200 hover:-translate-y-0.5 hover:opacity-80"
             >
               Get in Touch
@@ -40,9 +42,11 @@ export function Contact() {
           <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-6">
             {/* Gmail */}
             <a
-              href="mailto:abhinav.bhatpude.work@gmail.com"
-              aria-label="Email Abhinav"
-              title="Email"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abhinav.bhatpude.work@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Send Abhinav an email"
+              title="Email Abhinav"
               className="group flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-[var(--text-secondary)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
               <svg
