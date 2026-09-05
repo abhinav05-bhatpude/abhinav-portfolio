@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
+  --background: #e4e4d9;
+  --foreground: #18181b;
 
-  --surface: #111111;
-  --surface-hover: #171717;
+  --surface: #ffffff;
+  --surface-hover: #f4f4f2;
 
-  --text-primary: #f5f5f5;
-  --text-secondary: #a3a3a3;
-  --text-muted: #737373;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
 
-  --border: #262626;
-  --border-hover: #404040;
+  --border: #e4e4e7;
+  --border-hover: #d4d4d8;
 
-  --accent: #60a5fa;
-  --accent-hover: #3b82f6;
-  --accent-foreground: #0a0a0a;
+  --accent: #dc2626;
+  --accent-hover: #b91c1c;
+  --accent-foreground: #ffffff;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.25rem;
 
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.25);
-  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.25);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.08);
 }
 
 * {
@@ -40,14 +40,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family:
-  Inter,
-  ui-sans-serif,
-  system-ui,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
-   
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -66,6 +66,7 @@ button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
 @layer components {
   .text-display {
     font-size: clamp(2.75rem, 7vw, 5.5rem);
