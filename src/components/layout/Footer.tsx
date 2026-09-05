@@ -10,9 +10,9 @@ const navigation = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--border)]">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
-        <div>
+    <footer className="mt-10 border-t border-[var(--border)]">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+        <div className="text-center lg:text-left">
           <Link
             href="#hero"
             className="font-semibold text-[var(--text-primary)] transition-colors hover:text-[var(--accent)]"
@@ -27,7 +27,7 @@ export function Footer() {
 
         <nav
           aria-label="Footer navigation"
-          className="flex flex-wrap gap-x-5 gap-y-2"
+          className="flex flex-wrap justify-center gap-x-5 gap-y-3"
         >
           {navigation.map((item) => (
             <Link
@@ -40,7 +40,7 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className="flex gap-4">
+        <div className="flex justify-center gap-5">
           <a
             href="https://github.com/abhinav05-bhatpude"
             target="_blank"
@@ -63,7 +63,7 @@ export function Footer() {
 
       <div className="border-t border-[var(--border)]">
         <div className="mx-auto max-w-6xl px-6 py-4 sm:px-8">
-          <p className="text-xs text-[var(--text-secondary)]">
+          <p className="text-center text-xs text-[var(--text-secondary)]">
             © {new Date().getFullYear()} Abhinav Bhatpude. Built with Next.js.
           </p>
         </div>
